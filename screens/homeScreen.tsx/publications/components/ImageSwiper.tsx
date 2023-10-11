@@ -1,7 +1,8 @@
 import React from 'react';
-import {FlatList, View, Image} from 'react-native';
+import {FlatList, View, Image, Text} from 'react-native';
 import ImageSvg from '../../../../assets/images/publications/Image.svg';
 import {Dimensions} from 'react-native';
+import {theme} from '../../../../theme';
 const DATA = [
   {
     id: 1,
@@ -26,6 +27,28 @@ const ImageList = () => {
   );
 };
 
+const NumberPagination = ({data}: {data: number}) => {
+
+
+
+  return (
+    <View
+      style={{
+        paddingHorizontal: 10,
+        paddingVertical: 5,
+        backgroundColor: theme.colors.black,
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 15,
+        position: 'absolute',
+        top: 15,
+        right: 15,
+      }}>
+      <Text style={{color: 'white'}}>1/{data}</Text>
+    </View>
+  );
+};
+
 export default function ImageSwiper() {
   return (
     <View style={{flex: 1}}>
@@ -35,6 +58,7 @@ export default function ImageSwiper() {
         horizontal
         renderItem={({item}) => <ImageList />}
       />
+      <NumberPagination data={DATA.length} />
     </View>
   );
 }
