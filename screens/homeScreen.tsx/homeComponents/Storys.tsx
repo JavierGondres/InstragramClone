@@ -7,7 +7,7 @@ import {
 
 //theme
 import {theme} from '../../../theme';
-import StoryComponent from './storyComponent/StoryComponent';
+import StoryComponent from './stories/StoryComponent';
 
 const DATA = [
   {
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     backgroundColor: theme.colors.dark,
     flex: 1,
     height: 100,
-
+    marginBottom: 20
   },
   flatContainer: {
     justifyContent: 'space-between',

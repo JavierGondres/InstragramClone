@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 65,
     flexDirection: 'row',
-    padding: 20,
+    padding: theme.padding,
     justifyContent: 'space-between',
     alignItems: 'center',
   },
