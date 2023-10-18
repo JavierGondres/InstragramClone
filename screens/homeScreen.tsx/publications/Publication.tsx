@@ -6,6 +6,18 @@ import Options from '../../../assets/images/publications/MoreIcon.svg';
 import {theme} from '../../../theme';
 import ImageSwiper from './components/ImageSwiper';
 
+const DATA = [
+  {
+    id: 1,
+  },
+  {
+    id: 3,
+  },
+  {
+    id: 2,
+  },
+];
+
 export default function Publication() {
   return (
     <View>
@@ -18,7 +30,10 @@ export default function Publication() {
         </TouchableOpacity>
       </View>
       <View>
-        <ImageSwiper/>
+        <ImageSwiper data={DATA} />
+      </View>
+      <View>
+        
       </View>
     </View>
   );
